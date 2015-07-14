@@ -1,2 +1,0 @@
-# animated-ironman
-A game
