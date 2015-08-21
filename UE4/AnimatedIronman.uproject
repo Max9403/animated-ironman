@@ -1,0 +1,13 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{6A0B2446-4C59-8535-12A3-A6B4EBC46147}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "AnimatedIronman",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}
