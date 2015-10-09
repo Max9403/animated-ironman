@@ -7,7 +7,14 @@
 		{
 			"Name": "AnimatedIronman",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"CoreUObject",
+				"Engine"
+			]
 		}
+	],
+	"TargetPlatforms": [
+		"Android"
 	]
 }
