@@ -17,12 +17,13 @@ extern "C" {
 
 	JNIEXPORT void JNICALL Java_com_ers_bluetones_BlueService_foundDevice
 		(JNIEnv * env, jobject ob, jstring devName, jstring devId) {
-		const char *nativeName = env->GetStringUTFChars(devName, JNI_FALSE);
-		const char *nativeId = env->GetStringUTFChars(devId, JNI_FALSE);
-		UE_LOG(LogTemp, Warning, TEXT("FOUND DEVICE %s"), ANSI_TO_TCHAR(nativeName))
-			Holder::devices.Add(FString(nativeName), FString(nativeId));
-		env->ReleaseStringUTFChars(devName, nativeName);
-		env->ReleaseStringUTFChars(devId, nativeId);
+			const char *nativeName = env->GetStringUTFChars(devName, JNI_FALSE);
+			const char *nativeId = env->GetStringUTFChars(devId, JNI_FALSE);
+			UE_LOG(LogTemp, Warning, TEXT("FOUND DEVICE %s"), ANSI_TO_TCHAR(nativeName))
+				Holder::devices.Add(FString(nativeName), FString(nativeId));
+			env->ReleaseStringUTFChars(devName, nativeName);
+			env->ReleaseStringUTFChars(devId, nativeId);
+		
 	}
 	JNIEXPORT void JNICALL Java_com_ers_bluetones_BlueService_receiveData
 		(JNIEnv * env, jclass clazz, jstring device, jobject data){
